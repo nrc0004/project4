@@ -1,0 +1,14 @@
+Program = [
+  {
+  "name": "Leg Day",
+  "body": "Program for Legs"
+  }
+]
+
+Exercise = [
+  {
+  "name": "Squat",
+  "reps": 12,
+  "sets":3
+  }
+]
