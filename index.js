@@ -1,13 +1,16 @@
+//load dependencies
 const express = require('express')
 const parser = require("body-parser")
 const app = express()
 
+//load models
 const Program = require('./db/models.js').Program
 const Exercise = require('./db/models.js').Exercise
 const Blog = require('./db/models.js').Blog
 
 
 app.set('port', process.env.PORT || 4000)
+app.set('view engine')
 
 app.use("/assets", express.static("public"))
 app.use(parser.json({extended: true}))
@@ -17,7 +20,7 @@ app.listen(app.get('port'), () => {
 })
 
 app.get("/", (req, res) => {
-  res.send("Hello World!!!");
+  res.sendFile(__dirname + "/index.html")
 })
 
 app.get("/api/programs", function(req, res){

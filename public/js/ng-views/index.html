@@ -1,0 +1,12 @@
+<h1>{{vm.programs.length}} Programs</h1>
+<div>
+  <h3 data-ng-repeat="program in vm.programs">
+    <a data-ui-sref="show({name: program.name})">{{program.name}}</a>
+  </h3>
+</div>
+
+<form ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newProgram.name" placeholder="Name" />
+  <input type="text" ng-model="vm.newProgram.body" placeholder="Details" />
+  <button type="submit"> + Program </button>
+</form>

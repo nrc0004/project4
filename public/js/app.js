@@ -7,10 +7,15 @@ angular
      "$stateProvider",
      Router
    ])
-   .factory("Program", [
+  .factory("Program", [
    "$resource",
    Program
  ])
+ .controller("welcomeCtrl", [
+  "$state",
+  "Program",
+  welcomeController
+])
  .controller("indexCtrl", [
   "$state",
   "Program",
@@ -23,12 +28,14 @@ angular
   showController
 ])
 
-function Router($stateProvider){
-  $stateProvider
-  .state("welcome", {
-    url: "/",
-    templateUrl: "/assets/js/ng-views/welcome.html"
-  })
+function Router ($stateProvider, $urlRouterProvider) {
+   $stateProvider
+     .state("welcome", {
+       url: "/",
+       templateUrl: "/assets/js/ng-views/welcome.html",
+       controller: "welcomeCtrl",
+       controllerAs: "vm"
+     })
   .state("index", {
     url: '/programs',
     templateUrl: "/assets/js/ng-views/index.html",
@@ -47,6 +54,10 @@ function Program($resource){
   return $resource("/api/programs/:name", {}, {
     update: {method: "PUT"}
   })
+}
+
+function welcomeController (){
+  console.log("your in the welcome controller")
 }
 
 function indexController ($state, Program) {
