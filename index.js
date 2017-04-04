@@ -59,7 +59,7 @@ app.get("/api/exercises", function(req, res){
   })
 })
 
-app.get("/api/exercises", function(req, res){
+app.get("/api/exercises/:name", function(req, res){
   Exercise.findOne({name: req.params.name}).then(function(exercises){
     res.json(exercises)
   })
@@ -107,7 +107,7 @@ app.delete("/api/blogs/:title", function(req, res){
   })
 })
 
-app.put("/api/exercises/:title", function(req, res){
+app.put("/api/blogs/:title", function(req, res){
   Blog.findOneAndUpdate({name: req.params.title}, req.body, {new: true}).then(function(blog){
     res.json(blog)
   })

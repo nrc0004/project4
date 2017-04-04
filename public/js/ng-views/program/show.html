@@ -1,0 +1,20 @@
+<div ng-show="vm.program">
+  <h2>Program Focus: </h2>
+  <p>{{vm.program.name}}</p>
+  <h2>Description:</h2>
+  <p>{{vm.program.body}}</p>
+  <h2>Exercises</h2>
+  <div>
+    <h3 data-ng-repeat="exercise in vm.exercises">
+      <a data-ui-sref="show({name: program.name})">{{exercise.name}}</a>
+    </h3>
+  </div>
+</div>
+
+<div>
+  <input type="text" ng-model="vm.program.name" placeholder="Name" />
+  <input type="text" ng-model="vm.program.body" placeholder="description" />
+  <input type="text" ng-model="vm.program.exercise" placeholder="exercise" />
+  <button data-ng-click="vm.update()">Update</button>
+  <button data-ng-click="vm.destroy()">Remove Program from list</button>
+</div>
