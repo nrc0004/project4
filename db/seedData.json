@@ -12,3 +12,10 @@ Exercise = [
   "sets":3
   }
 ]
+
+Blog = [
+  {
+    "title": "Lift Heavy",
+    "content" : "Stuff stuff stuff"
+  }
+]

@@ -15,10 +15,17 @@ const ExerciseSchema = new mongoose.Schema({
     reps: Number
 })
 
+const BlogSchema = new mongoose.Schema ({
+    title: String,
+    content: String
+})
+
 const Program = mongoose.model("Program", ProgramSchema)
-const Exercise= mongoose.model("Exercise", ExerciseSchema)
+const Exercise = mongoose.model("Exercise", ExerciseSchema)
+const Blog = mongoose.model("Blog", BlogSchema)
 
 module.exports = {
   Program,
-  Exercise
+  Exercise,
+  Blog
 }
