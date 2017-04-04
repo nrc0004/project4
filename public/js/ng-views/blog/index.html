@@ -2,6 +2,7 @@
 <div>
   <h3 data-ng-repeat="blog in vm.blogs">
     <a data-ui-sref="show({title: blog.title})">{{blog.title}}</a>
+    <p>{{blog.content}}</p>
   </h3>
 </div>
 
