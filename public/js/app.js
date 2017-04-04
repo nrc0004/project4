@@ -34,6 +34,11 @@ angular
     "Program",
     welcomeController
   ])
+  .controller("aboutCtrl", [
+    "$state",
+    "Program",
+    aboutController
+  ])
   .controller("indexCtrl", [
     "$state",
     "Program",
@@ -55,6 +60,12 @@ function Router ($stateProvider, $urlRouterProvider) {
        controller: "welcomeCtrl",
        controllerAs: "vm"
      })
+  .state("about", {
+        url: "/about",
+        templateUrl: "/assets/js/about.html",
+        controller: "aboutCtrl",
+        controllerAs: "vm"
+    })
   .state("index", {
     url: '/programs',
     templateUrl: "/assets/js/ng-views/program/index.html",
@@ -94,6 +105,7 @@ function Program($resource){
   })
 }
 function welcomeController (){}
+function aboutController(){}
 function indexController ($state, Program) {
   this.programs = Program.query()
   this.newProgram = new Program()
