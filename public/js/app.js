@@ -16,7 +16,7 @@ angular
      Exercise
    ])
    .factory("Blog",[
-     "resource",
+     "$resource",
      Blog
    ])
   .controller ("BlogIndexCtrl",[
@@ -24,28 +24,29 @@ angular
     "Blog",
     BlogIndexController
   ])
+  .controller ("BlogShowCtrl",[
+    "$state",
+    "Blog",
+    BlogShowController
+  ])
   .controller("welcomeCtrl", [
     "$state",
     "Program",
     welcomeController
   ])
- .controller("indexCtrl", [
+  .controller("indexCtrl", [
     "$state",
     "Program",
     indexController
   ])
-.controller("showCtrl", [
+  .controller("showCtrl", [
     "$state",
     "$stateParams",
     "Program",
     showController
   ])
-// .controller("ExShowCtrl",[
-//   "state",
-//   "$stateParams",
-//   ExShowController
-// ])
 
+//router functions
 function Router ($stateProvider, $urlRouterProvider) {
    $stateProvider
   .state("welcome", {
@@ -80,7 +81,7 @@ function Router ($stateProvider, $urlRouterProvider) {
   })
   .state("BlogIndex", {
     url: '/blogs',
-    templateUrl: "/assets/js/ng-views/blog/show.html",
+    templateUrl: "/assets/js/ng-views/blog/index.html",
     controller: "BlogIndexCtrl",
     controllerAs: "vm"
   })
@@ -137,4 +138,24 @@ function Blog ($resource){
   return $resource("/api/blogs/:title", {}, {
     update: {method: "PUT"}
   })
+}
+function BlogIndexController($state, Blog){
+  this.blogs = Blog.query()
+  this.newBlog = new Blog()
+  this.create = function(){
+    this.newBlog.$save().then(function(blog){
+      $state.go("show", {title: blog.title})
+    })
+  }
+}
+function BlogShowController($state, $stateParams, Blog){
+  this.blog = Blog.get({title: $stateParams.title})
+  this.update = function(){
+    this.blog.$update({title: $stateParams.title})
+  }
+  this.destroy = function(){
+    this.blog.$delete({title: $stateParams.title}).then(function(){
+      $state.go("index")
+    })
+  }
 }
