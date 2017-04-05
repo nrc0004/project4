@@ -3,16 +3,16 @@ const mongoose = require('./connection.js')
 const Schema = mongoose.Schema
 const ObjectId = Schema.ObjectId
 
+const ExerciseSchema = new mongoose.Schema({
+  name: String,
+  sets: Number,
+  reps: Number
+})
+
 const ProgramSchema = new mongoose.Schema({
     name: String,
     body: String,
-    exercise: [{type: Schema.ObjectId, ref: "Exercise"}]
-})
-
-const ExerciseSchema = new mongoose.Schema({
-    name: String,
-    sets: Number,
-    reps: Number
+    exercises: [ExerciseSchema]
 })
 
 const BlogSchema = new mongoose.Schema ({

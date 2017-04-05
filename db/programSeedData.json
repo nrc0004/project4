@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Leg Day",
+    "body": "Program for Legs",
+    "exercises": [
+      {
+        "name": "Squat",
+        "reps": 12,
+        "sets":3
+      },
+      {
+        "name": "Press",
+        "reps": 12,
+        "sets":3
+      },
+      {
+        "name": "Lunge",
+        "reps": 12,
+        "sets":3
+      }
+
+    ]
+  },
+  {
+    "name": "Arm Day",
+    "body": "Program for Arms",
+    "exercises": [
+      {
+        "name": "Curls",
+        "reps": 12,
+        "sets":3
+      },
+      {
+        "name": "Row",
+        "reps": 12,
+        "sets":3
+      },
+      {
+        "name": "Deadlift",
+        "reps": 12,
+        "sets":3
+      }
+
+    ]
+  },
+  {
+    "name": "Core Day",
+    "body": "Program for Core",
+    "exercises": [
+      {
+        "name": "Crunch",
+        "reps": 12,
+        "sets":3
+      },
+      {
+        "name": "Russian Twist",
+        "reps": 12,
+        "sets":3
+      },
+      {
+        "name": "Plank",
+        "reps": 12,
+        "sets":3
+      }
+    ]
+  }
+]

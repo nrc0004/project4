@@ -79,9 +79,9 @@ a {
 
 .ProgramDisplay {
   display: flex;
-  max-width: 900px;
+  max-width: 95%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .ProgramBox {
@@ -89,15 +89,20 @@ a {
   width: 200px;
   background-color: grey;
   border: solid;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 10px 10px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  overflow: auto;
+
 }
 
+.wrap{
+    width: 200px;
+    word-wrap: break-word;
+}
 .addProgram {
   text-align: center;
 }
@@ -118,10 +123,17 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   border: solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
   margin-top: 10px;
+  word-wrap: break-word;
+  width: 700px;
+  height: 80%;
+
 }
 
 .addBlog{

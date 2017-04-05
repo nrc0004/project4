@@ -3,8 +3,9 @@
 <div class="ProgramDisplay">
 
     <h3 class="ProgramBox" data-ng-repeat="program in vm.programs">
+
       <a data-ui-sref="show({name: program.name})">{{program.name}}</a>
-      <p>{{program.body}}</p>
+      <p class="wrap">{{program.body}}</p>
     </h3>
 
 </div>
