@@ -156,7 +156,7 @@ function BlogIndexController($state, Blog){
   this.newBlog = new Blog()
   this.create = function(){
     this.newBlog.$save().then(function(blog){
-      $state.go("show", {title: blog.title})
+      $state.go("BlogIndex", {title: blog.title})
     })
   }
 }
