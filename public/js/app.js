@@ -116,7 +116,12 @@ function indexController ($state, Program) {
   }
 }
 function showController($state, $stateParams, Program){
-  this.program = Program.get({name: $stateParams.name})
+
+  this.program = Program.get({name: $stateParams.name}, (program) => {
+    console.log(program)
+    console.log(program.exercises)
+    this.exercises = program.exercises
+  })
   this.update = function(){
     this.program.$update({name: $stateParams.name})
   }
@@ -134,6 +139,7 @@ function Exercise($resource){
   })
 }
 function ExShowController($state, $stateParams, Exercise){
+  console.log("here")
   this.exercise = Exercise.get({name: $stateParams.name})
   this.update = function(){
     this.exercise.$update({name: $stateParams.name})
@@ -156,7 +162,8 @@ function BlogIndexController($state, Blog){
   this.newBlog = new Blog()
   this.create = function(){
     this.newBlog.$save().then(function(blog){
-      $state.go("BlogIndex", {title: blog.title})
+      console.log("blog logged")
+      $state.go($state.current, {}, {reload: true})
     })
   }
 }
