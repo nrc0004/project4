@@ -52,7 +52,6 @@
         "weight": 123,
         "photo_url":"http://i.imgur.com/pfPLTG4.jpg"
       }
-
     ]
   },
   {
@@ -79,6 +78,82 @@
         "sets":3,
         "weight": 123,
         "photo_url":"http://i.imgur.com/lNUOMz8.jpg"
+      }
+    ]
+  },
+    {
+      "name": "5/3/1 (Squats)",
+      "body": "Week 1",
+      "exercises": [
+        {
+          "name": "Squats",
+          "reps": 5,
+          "sets":5,
+          "weight": 99.45,
+          "photo_url":"http://i.imgur.com/UrpC5Ja.jpg"
+          },
+        {
+          "name": "Squats",
+          "reps": 5,
+          "sets":114,
+          "weight": 123,
+          "photo_url":"http://i.imgur.com/UrpC5Ja.jpg"
+          },
+        {
+          "name": "Squats",
+          "reps": 5,
+          "sets":5,
+          "weight": 130,
+          "photo_url":"http://i.imgur.com/UrpC5Ja.jpg"
+        },
+        {
+          "name": "Leg Curl",
+          "reps": 12,
+          "sets":3,
+          "weight": 70,
+          "photo_url":"http://i.imgur.com/ieLgMD7.jpg"
+        },
+        {
+          "name": "Row",
+          "reps": 12,
+          "sets":3,
+          "weight": 27,
+          "photo_url": "http://i.imgur.com/VYhRljM.jpg"
+        },
+        {
+          "name": "Bicep Curl",
+          "reps": 12,
+          "sets":3,
+          "weight": 15,
+          "photo_url": "http://i.imgur.com/CkbBwBp.jpg"
+        },
+        {
+          "name": "Calf Raises",
+          "reps": 12,
+          "sets":3,
+          "weight": 180,
+          "photo_url":"http://i.imgur.com/CcCoTjr.jpg"
+        },
+        {
+          "name": "Glute Bridges",
+          "reps": 12,
+          "sets":3,
+          "weight": 50,
+          "photo_url":"http://i.imgur.com/CvTKMjp.jpg"
+        },
+        {
+          "name": "Hyper Extension",
+          "reps": 12,
+          "sets":3,
+          "weight": 20,
+          "photo_url":"http://i.imgur.com/1aIkeyY.jpg"
+        },
+        {
+          "name": "Shoulder Raises",
+          "reps": 12,
+          "sets":3,
+          "weight": 10,
+          "photo_url":"http://i.imgur.com/2CYxEhG.jpg"
       }
     ]
   }
