@@ -6,17 +6,23 @@
       {
         "name": "Squat",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url": "http://i.imgur.com/UrpC5Ja.jpg"
       },
       {
         "name": "Press",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/pbcGf2c.jpg"
       },
       {
         "name": "Lunge",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/I4mCh6D.jpg"
       }
 
     ]
@@ -28,17 +34,23 @@
       {
         "name": "Curls",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/CkbBwBp.jpg"
       },
       {
         "name": "Row",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/VYhRljM.jpg"
       },
       {
         "name": "Deadlift",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/pfPLTG4.jpg"
       }
 
     ]
@@ -50,17 +62,23 @@
       {
         "name": "Crunch",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/flG9kDx.png"
       },
       {
         "name": "Russian Twist",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/VX93Q8L.jpg"
       },
       {
         "name": "Plank",
         "reps": 12,
-        "sets":3
+        "sets":3,
+        "weight": 123,
+        "photo_url":"http://i.imgur.com/lNUOMz8.jpg"
       }
     ]
   }

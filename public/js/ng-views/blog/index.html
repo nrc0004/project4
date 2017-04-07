@@ -1,17 +1,15 @@
 <div class="blogBox">
   <h3 data-ng-repeat="blog in vm.blogs">
     <div class = "blogs" >
-      <a class="title" data-ui-sref="show({title: blog.title})">{{blog.title}}</a>
+      <p class="title">{{blog.title}}</p>
       <p class="content">{{blog.content}}</p>
     </div>
   </h3>
-
 
     <form class="addBlog"ng-submit="vm.create()">
       <input class ="add" type="text" ng-model="vm.newBlog.title" placeholder="title" /> </br>
       <textarea type="text" ng-model="vm.newBlog.content" placeholder="Content"></textarea> </br>
       <button class ="add"  ng-click ="vm.addBlog()"> + Blog </button>
     </form>
-
 
 </div>

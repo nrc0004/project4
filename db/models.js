@@ -5,8 +5,10 @@ const ObjectId = Schema.ObjectId
 
 const ExerciseSchema = new mongoose.Schema({
   name: String,
+  weight: String,
   sets: Number,
-  reps: Number
+  reps: Number,
+  photo_url: String
 })
 
 const ProgramSchema = new mongoose.Schema({

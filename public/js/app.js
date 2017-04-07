@@ -139,14 +139,26 @@ function Exercise($resource){
   })
 }
 function ExShowController($state, $stateParams, Exercise){
-  console.log("here")
+  let vm = this
   this.exercise = Exercise.get({name: $stateParams.name})
+  //update exercise
   this.update = function(){
     this.exercise.$update({name: $stateParams.name})
   }
+
+  //create new exercise attached to a program
+  this.newExercise = new Exercise()
+  this.newExercise.create = function(){
+    vm.newExercise.$save().then(function(exercise){
+      console.log("new exercise creates")
+      $state.reload()
+    })
+  }
+
+  //delete exercise
   this.destroy = function(){
     this.exercise.$delete({name: $stateParams.name}).then(function(){
-      $state.go("index")
+      $state.reload()
     })
   }
   }
@@ -162,7 +174,6 @@ function BlogIndexController($state, Blog){
   this.newBlog = new Blog()
   this.create = function(){
     this.newBlog.$save().then(function(blog){
-      console.log("blog logged")
       $state.go($state.current, {}, {reload: true})
     })
   }
